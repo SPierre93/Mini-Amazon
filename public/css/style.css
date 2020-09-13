@@ -1,0 +1,777 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    display: grid;
+    grid-template-rows: 80px auto 300px;
+    background-color: var(--light-neutral-color);
+
+}
+
+:root
+{
+    --accent-color: #f79b34;
+    --main-dark-color: #131921;
+    --medium-dark-color: #232f3e;
+    --light-neutral-color: #eaeded;
+    --medium-neutral-color: #9b989b;
+    --primary-font: 'PT Sans Narrow', sans-serif;
+    --secondary-font: 'Nunito', sans-serif;
+}
+
+h1 
+{
+    font-size: 2.3rem;
+    padding-bottom: 15px;
+}
+
+h1, h2, h3                                                                          /* header font */
+{
+    font-family: var(--primary-font);
+}
+
+p, a                                                                              /* paragraph font */
+{
+    font-family: var(--secondary-font);
+}
+
+.generalContainer
+{
+    padding: 40px;
+    background-color: var(--light-neutral-color);
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.scrollToTop
+{
+    display: none;
+    color: var(--accent-color);
+    font-size: 3.2rem;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.scrollToTop:hover
+{
+    color: var(--medium-neutral-color);
+}
+
+
+/* NAVIGATION */
+nav
+{
+    max-width: 100vw;
+}
+
+#visibleNavBar                                                                /* navigation bar */
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-dark-color);
+    z-index: 1;
+}
+
+#visibleNavBar a                                                              /* all links in the nav*/
+{
+    color: #fff;
+    text-decoration: none;  
+    align-self: center;
+    font: var(--secondary-font);
+}
+
+#visibleNavBar a:link
+{
+    color: #fff;
+}
+
+#visibleNavBar a:visited
+{
+    color: #fff;
+}
+
+header > div                                                                 /* bar under Navigation Bar */
+{
+    background-color: var(--medium-dark-color);
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 1;
+}
+
+#menuIcon
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+#menuIcon > i
+{
+    font-size: 35px;
+    color: var(--accent-color);
+    margin-left: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+#menuIcon > i:hover
+{
+    cursor: pointer;
+}
+
+#menuIcon > a > img
+{
+    height: 35px;
+}
+
+#searchbar                                                             /* overall Search bar */
+{
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    text-align: center;
+    color: var(--main-dark-color);
+    width: 100%;
+}
+
+#dropdownSearch                                                         /* Drop down for Search bar*/
+{
+    background-color: var(--light-neutral-color);
+    border-radius: 5px 0 0 5px;
+    border: none;
+    height: 40px;
+    width: 50px;
+    text-align: end;
+    font: var(--secondary-font);
+}
+
+#dropdownSearch:hover
+{
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+#searchbar > input                                                      /* Search bar text box */
+{
+    height: 40px;
+    padding-left: 5px;
+    font: var(--secondary-font);
+    border: none;
+}
+
+#searchbar > i                                                         /* Search bar icon */
+{
+    background-color: var(--accent-color);
+    width: 50px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+#searchbar > i:hover
+{
+    background-color: #ffaa48;
+}
+
+#loginCartArea
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: end;
+}
+
+#loginCartArea > div
+{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+#loginCartArea > div > a > p
+{
+    color: var(--accent-color);
+    justify-content: center;
+    padding-left: 10px;
+}
+
+#loginCartArea > div > a > i                                                  /* Cart icon */
+{
+    font-size: 25px;
+}
+
+#loginCartArea > a:link
+{
+    color: #fff;
+}
+
+#loginCartArea > a:visited
+{
+    color: #fff;
+}
+
+#loginCartArea > a:hover                                                      /* Sign in link */
+{
+    color: var(--accent-color);   
+}
+
+
+/* MENU MODAL */
+#menuContents
+{
+    display: none;
+    list-style: none;
+    width: 350px;
+    height: 100vh;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#menuHeader
+{
+    height: 60px;
+    padding: 0 10px 0 50px;
+}
+
+#menuHeader > a
+{
+    color: #fff;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+#menuContents > div:first-child
+{
+    background-color: var(--medium-dark-color);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+#menuHeader:hover, #menuCloseButton:hover
+{
+    cursor: pointer;
+}
+
+#menuHeader i, #menuCloseButton
+{
+    color: #fff;
+}
+
+#menuHeader i, #menuHeader a
+{
+    font-size: 1.5rem;
+    padding-top: 15px;
+}
+
+#menuHeader a:hover
+{
+    text-decoration: underline;
+}
+
+#menuContents li
+{
+    padding-bottom: 15px;
+}
+
+#menuContents > div:last-child
+{
+    background-color: #ffffff;
+}
+
+#menuContents > div:last-child > p
+{
+    color:var(--medium-neutral-color);
+}
+
+#menuContents > div:last-child > p:nth-child(3)
+{
+    padding-top: 35px;
+}
+#menuContents > div:last-child > div > ul > li
+{
+    list-style: none;
+}
+
+#menuContents > div:last-child > p
+{
+    padding: 15px 0 0 50px;
+}
+
+#menuContents > div:last-child > div > ul > li
+{
+    padding: 15px 0 15px 50px;
+}
+
+#menuContents > div:last-child > div > ul > li:hover
+{
+    background-color: var(--light-neutral-color);
+    width: 100%;
+}
+
+#menuContents > div:last-child > div > ul > li > a
+{
+    color: #000;
+    text-decoration: none;
+}
+
+#menuCloseButton
+{
+    justify-self: center;
+}
+
+#menuCloseButton > i 
+{
+    font-size: 1.5rem;
+    padding-top: 15px;
+    color: #fff;
+}
+
+
+/* HOME */
+#heroImagesCarousel
+{
+    background-image: url("#");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#heroImagesCarousel > p
+{
+    text-align: right;
+    font-size: 2.6rem;
+    padding: 30px 40px 0 600px;
+}
+
+#carouselHeroHome
+{
+    height: 500px;
+}
+
+#slideContent div
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    margin-bottom: 40px;
+    grid-column: 1 / span 3;
+}
+
+#slideContent > i 
+{
+    padding-top: 30px;
+}
+
+#leftArrow, #rightArrow
+{
+    position: relative;
+    top: 440px;
+    color: var(--light-neutral-color);
+    cursor: pointer;
+}
+
+#homeContainer h2                                                  /* Category headers */
+{
+    font-size: 2rem;
+    padding: 20px 0 20px 25px;
+    padding-bottom: 20px;
+}
+
+#homeContainer > div > div > a                                            /* 'See more' links */
+{
+    text-decoration: none;
+    color: var(--accent-color);
+    padding-left: 25px;
+    font-style: italic;
+}
+
+#homeContainer > div > div > a:visited
+{
+    color: var(--accent-color);
+}
+
+#homeContainer > div > div > a:hover
+{
+    color: var(--medium-neutral-color);
+}
+
+#bestsellerCarouselContainer, #productCategoryCarouselOne, #productCategoryCarouselTwo, #productCategoryCarouselThree, 
+#productCategoryCarouselFour
+{
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+#bestsellerCarouselContainer > i
+{
+    color: var(--medium-dark-color);
+    font-size: 1.5rem;
+}
+
+#productCardsCarousel
+{
+    height: inherit;
+    width: 100%;
+}
+
+#homeContainer h2
+{
+    display: inline-block;
+}
+
+#bestsellerCarousel > div > img, #productListCarousel1 > div > img, #productListCarousel2 > div > img, #productListCarousel3 > div > img, #productListCarousel4 > div > img
+{
+    align-self: center;
+    width: 100%;
+    height: inherit;
+    object-fit: contain;
+    border: none;
+    justify-self: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+#bestsellerCarousel, #productListCarousel1, #productListCarousel2, #productListCarousel3, #productListCarousel4
+{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselProductGrid > div
+{
+    justify-self: center;
+    align-self: center;
+}
+
+.carouselProductGrid > div > i
+{
+    font-size: 2rem;
+}
+
+.carouselProductGrid
+{
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    column-gap: 30px;
+    height: 300px;
+    margin: 0 25px;
+    justify-content: center;
+}
+
+.carouselArrowsGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.carouselArrowsGrid > div > i:hover
+{
+    cursor: pointer;
+    color: var(--medium-neutral-color);
+}
+
+.leftArrowScroll
+{
+    padding-left: 25px;
+    font-size: 2.5rem;
+}
+
+.rightArrowScroll
+{
+    text-align: right;
+    padding-right: 25px;
+    font-size: 2.5rem;
+}
+
+#productCardsCarousel
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    height: 450px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#categoryProductCard
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50%;
+    column-gap: 5px;
+    row-gap: 15px;
+}
+
+.miniCategoryCard
+{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    justify-content: center;
+}
+
+.miniCategoryCard > img
+{
+    height: 100%;
+    align-self: center;
+}
+
+.miniCategoryCard > p
+{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.productCards
+{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 1fr 250px 1fr;
+}
+
+.productCards > h3
+{
+    font-size: 1.8rem;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.productCards > img
+{
+    width:100%;
+    align-items: center;
+}
+
+.productCards > a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 0;
+    background-color: var(--accent-color);
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    align-self: center;
+    font-style: italic;
+}
+
+.productCards > a:hover
+{
+    background-color: var(--medium-dark-color);
+}
+
+
+/* LOG IN & REGISTER */
+#loginContainer, #signinContainer
+{
+    background-color: var(--light-neutral-color);
+}
+
+.formGrid
+{
+   display: grid; 
+   grid-template-columns: 1fr 550px 1fr;
+}
+
+.formGrid > div
+{
+    grid-column-start: 2;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 50px 50px 50px;
+    margin: 20px 0;
+    box-shadow: 5px 10px 50px #d4d8d8;
+    width: 100%;
+}
+
+.formGrid > div > div
+{
+    text-align: center;
+}
+
+.formGrid > div > div > p
+{
+    color: var(--medium-neutral-color);
+    border-top: 1px solid var(--medium-neutral-color);
+    padding: 15px 0 3px 0;
+    font-size: 1.1rem;
+}
+
+.formGrid > div > div > a
+{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.formGrid > div > div > a:hover
+{
+    color: var(--medium-dark-color);
+}
+
+.formGrid > div > form
+{
+    justify-self: center;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.formGrid label
+{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.formGrid input[type=text]
+{
+    border-radius: 5px;
+    border: 1.5px solid var(--medium-neutral-color);
+    height: 40px;
+    width: 100%;
+    padding-left: 5px;
+    font: var(--secondary-font);
+}
+
+.formGrid input[type=text]:focus
+{
+    border-radius: 5px;
+    outline: none;
+    border: 3px solid var(--accent-color);
+}
+
+.formBoxes 
+{
+    margin-bottom: 30px;
+}
+
+.passwordBoxes 
+{
+    margin-bottom: 10px;
+}
+
+.formGrid form > p
+{
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.formGrid > div > form > input[type=submit]
+{
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 7px;
+    width: 150px;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 10px auto 30px auto;
+    text-align: center;
+}
+
+.formGrid > div > form > input[type=submit]:hover
+{
+    background-color: var(--medium-dark-color);
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+footer
+{
+    background-color: var(--medium-dark-color);
+    max-width: 100vw;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    bottom: 0;
+}
+
+footer h1, footer a:link,  footer a:visited, footer h2
+{
+    color: #fff;
+}
+
+footer a
+{
+    font: var(--secondary-font);
+    text-decoration: none;
+}
+
+footer a:hover
+{
+    text-decoration: underline;
+}
+
+footer li
+{
+    list-style: none;
+}
+
+footer > div:last-child > img
+{
+    width: 120px;
+    padding-top: 20px;
+}
+
+footer h2
+{
+    color: var(--accent-color);
+    padding-bottom: 5px;
+}
+
+#footerGridTop
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 0.25px solid var(--light-neutral-color);
+    padding: 30px 100px;
+    justify-items: center;
+}
+
+#footerGridBottom
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#footerGridBottom > img
+{
+    grid-column-start: 2;
+    justify-self: center;
+    padding-bottom: 15px;
+}

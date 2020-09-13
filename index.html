@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Amazon | Home </title>
+    <link rel="shortcut icon" href="public/img/favicon.ico"/>
+    <script src="https://kit.fontawesome.com/383decfa02.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="menuContents">
+                <div>
+                    <div id="menuHeader">
+                        <i class="fas fa-user-circle"></i>
+                        <a href="public/html/login.html"> Hello, Sign in </a>
+                    </div>
+
+                    <div id="menuCloseButton">
+                        <i class="far fa-times-circle"></i>
+                    </div>
+                </div>
+                
+                <div>
+                    <p> SHOP BY CATEGORY </p>
+                    <div>
+                        <ul>
+                            <li><a href=""> Appliances </a></li>
+                            <li><a href=""> Books </a></li>
+                            <li><a href=""> Electronics </a></li>
+                            <li><a href=""> Furniture </a></li>
+                            <li><a href=""> Luggage </a></li>
+                            <li><a href=""> Makeup </a></li>
+                            <li><a href=""> Skin care </a></li>
+                            <li><a href=""> Toys </a></li>
+                        </ul>
+                    </div>
+
+                    <p> HELP & SETTINGS </p>
+                    <div>
+                        <ul>
+                            <li><a href=""> Your account </a></li>
+                            <li><a href=""> Register </a></li>
+                            <li><a href=""> Log in </a></li>
+                            <li><a href=""> View cart </a></li>
+                            <li><a href=""> Payment </a></li>
+                            <li><a href=""> Help </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id=visibleNavBar>
+                <div id="menuIcon">
+                    <i class="fas fa-bars"></i>
+                    <a href="index.html"><img src="public/img/amazonFullLogo.png" alt="Amazon logo"></a> 
+                </div>
+    
+                <div id="searchbar">
+                    <select name="dropdownSerachItems" id="dropdownSearch">
+                        <option value=""> All </option>
+                        <option value=""> All Departments </option>
+                        <option value=""> Appliances </option>
+                        <option value=""> Books </option>
+                        <option value=""> Electronics </option>
+                        <option value=""> Furniture </option>
+                        <option value=""> Luggage </option>
+                        <option value=""> Makeup </option>
+                        <option value=""> Skin care </option>
+                        <option value=""> Toys </option>
+                    </select>
+                    <input type="text">
+                    <i class="fas fa-search"></i>
+                </div>
+    
+                <div id="loginCartArea">
+                    <a href="public/html/login.html"> Hello, Sign in </a>
+    
+                    <div>
+                        <a href="public/html/cart.html">
+                            <p> 0 </p>
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+        <div></div>
+    </header>
+    
+    <main id="homeContainer">
+        <div class="generalContainer">
+            <div id=carouselHeroHome> 
+                <div id=carouselHeroContainer>
+                    <div id="slideContent">
+                        <div class="carouselArrowsGrid">
+                            <div id="heroImagesCarousel">
+                                <div class="leftArrowScroll"> <i id="leftArrow"class="fas fa-caret-square-left"></i> </div>
+                                <div class="rightArrowScroll"> <i id="rightArrow" class="fas fa-caret-square-right"></i> </div>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="productCardsCarousel">
+                <div class="productCards">
+                    <h3> Shop by category </h3>
+                    <div id="categoryProductCard">
+                        <div class="miniCategoryCard">
+                            <img src="public/img/appliances/Cereal dispenser.jpg" alt="">
+                            <p> Appliances </p>
+                        </div>
+
+                        <div class="miniCategoryCard">
+                            <img src="public/img/electronics/Fitbit.jpg" alt="">
+                            <p> Electronics </p>
+                        </div>
+
+                        <div class="miniCategoryCard">
+                            <img src="public/img/books/The Alchemist.jpg" alt="">
+                            <p> Books </p>
+                        </div>
+
+                        <div class="miniCategoryCard">
+                            <img src="public/img/furniture/Sofa bed.jpg" alt="">
+                            <p> Furniture </p>
+                        </div>
+                    </div>
+                    <a href=""> Shop now </a>
+                </div>
+
+                <div class="productCards">
+                    <h3> Luggage </h3>
+                    <img src="public/img/luggage/Luggage set.jpg" alt="">
+                    <a href=""> See more</a>
+                </div>
+
+                <div class="productCards">
+                    <h3> Makeup </h3>
+                    <img src="public/img/makeup/Fenty gloss set.jpg" alt="">
+                    <a href=""> See more</a>
+                </div>
+
+                <div class="productCards">
+                    <h3> Skin care </h3>
+                    <img src="public/img/skincare/Under Eye Patch.jpg" alt="">
+                    <a href=""> See more</a>
+                </div>
+            </div>
+    
+            <div id="bestsellerCarouselContainer">
+                <h2> Best Sellers </h2>
+                <i class="fas fa-check-circle"></i>
+                <a href=""> See more </a>
+                
+                <div id=bestsellerCarousel>
+                    <div class="carouselProductGrid">
+                        <img src="public/img/appliances/Cereal dispenser.jpg" alt="">
+                        <img src="public/img/electronics/Fitbit.jpg" alt="">
+                        <img src="public/img/books/Mexican Gothic.jpg" alt="">
+                        <img src="public/img/electronics/Polaroid camera.jpg" alt="">
+                        <img src="public/img/furniture/sidetable.jpg" alt="">
+                        <img src="public/img/appliances/Vacuum sealer.jpg" alt="">
+                    </div> 
+                    <div class="carouselArrowsGrid">
+                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                    </div>
+                </div>
+            </div>
+    
+           <div id="productCategoryCarouselOne">
+                <h2> Appliances </h2>
+                <a href=""> See more </a>
+                
+                <div id=productListCarousel1>
+                    <div class="carouselProductGrid">
+                        <img src="public/img/appliances/Air fryer.jpg" alt="">
+                        <img src="public/img/appliances/Coffee maker.jpg" alt="">
+                        <img src="public/img/appliances/S'mores maker.jpg" alt="">
+                        <img src="public/img/appliances/Cereal dispenser.jpg" alt="">
+                        <img src="public/img/appliances/Glass kettle.jpg" alt="">
+                        <img src="public/img/appliances/Vacuum sealer.jpg" alt="">
+                    </div> 
+                    <div class="carouselArrowsGrid">
+                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                    </div>
+                </div>
+            </div>
+    
+            <div id="productCategoryCarouselTwo">
+                <h2> Books </h2>
+                <a href=""> See more </a>
+    
+                <div id=productListCarousel2>
+                    <div class="carouselProductGrid">
+                        <img src="public/img/books/Harry Potter box set.jpg" alt="">
+                        <img src="public/img/books/Hobbit LOTR box set.jpg" alt="">
+                        <img src="public/img/books/Narnia box set.jpg" alt="">
+                        <img src="public/img/books/The Alchemist.jpg" alt="">
+                        <img src="public/img/books/Mexican Gothic.jpg" alt="">
+                        <img src="public/img/books/One By One.jpg" alt="">
+                    </div>
+                    <div class="carouselArrowsGrid">
+                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                    </div>
+                </div>
+            </div>
+    
+            <div id="productCategoryCarouselThree">
+                <h2> Electronics </h2>
+                <a href=""> See more </a>
+    
+                <div id=productListCarousel3>
+                    <div class="carouselProductGrid">
+                        <img src="public/img/electronics/Headphones.jpg" alt="">
+                        <img src="public/img/electronics/Speaker.jpg" alt="">
+                        <img src="public/img/electronics/Polaroid camera.jpg" alt="">
+                        <img src="public/img/electronics/Tablet.jpg" alt="">
+                        <img src="public/img/electronics/Microphone.jpg" alt="">
+                        <img src="public/img/electronics/Fitbit.jpg" alt="">
+                    </div>
+                    <div class="carouselArrowsGrid">
+                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                    </div>
+                </div>
+            </div>
+            
+            <div id="productCategoryCarouselFour">
+                <h2> Furniture </h2>
+                <a href=""> See more </a>
+    
+                <div id=productListCarousel4>
+                    <div class="carouselProductGrid">
+                        <img src="public/img/furniture/sidetable.jpg" alt="">
+                        <img src="public/img/furniture/Bookshelf crisscross.jpg" alt="">
+                        <img src="public/img/furniture/Bed.jpg" alt="">
+                        <img src="public/img/furniture/Coffee table.jpg" alt="">
+                        <img src="public/img/furniture/Loveseat.jpg" alt="">
+                        <img src="public/img/furniture/Sofa bed.jpg" alt="">
+                    </div>
+                    <div class="carouselArrowsGrid">
+                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scrollToTop">
+                <i class="fas fa-arrow-alt-circle-up"></i>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footerGridTop">
+            <div>
+                <h2> User Portal </h2>
+                <ul>
+                    <li><a href=""> Register </a></li>
+                    <li><a href=""> Sign in</a></li>
+                    <li><a href=""> Update profile </a></li>
+                    <li><a href=""> View cart </a></li>
+                    <li><a href=""> Payment </a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2> Products </h2>
+                <ul>
+                    <li><a href=""> Bestsellers </a></li>
+                    <li><a href=""> Appliances </a></li>
+                    <li><a href=""> Books </a></li>
+                    <li><a href=""> Electronics </a></li>
+                    <li><a href=""> Furniture </a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2> Connect </h2>
+                <ul>
+                    <li><a href=""> About us </a></li>
+                    <li><a href=""> Contact us </a></li>
+                    <li><a href=""> Supply to us </a></li>
+                    <li><a href=""> Vacancies </a></li>
+                    <li><a href=""> Help </a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footerGridBottom">
+            <img src="public/img/amazonFullLogo.png" alt="Amazon logo">
+        </div>
+    </footer>
+
+    <script src="public/js/app.js"></script>
+</body>
+</html>
