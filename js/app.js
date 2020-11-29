@@ -160,9 +160,9 @@ const main=()=>{
     {
         document.addEventListener("DOMContentLoaded",(event)=>{
             //Objects created from the Carousel class
-            let deliveriesSect = new Carousel("url('../public/img/hero-images/Delivery-Hero.png')", "We ship over 45 million products around the world.");
-            let booksSect = new Carousel("url('../public/img/hero-images/Books-Hero.png')", "Discover a variety of books in your favouite genre.");
-            let electronicsSect = new Carousel("url('../public/img/hero-images/Electronics-Hero.png')", "Find the latest and greatest gadgets available in tech.");
+            let deliveriesSect = new Carousel("url('img/hero-images/Delivery-Hero.png')", "We ship over 45 million products around the world.");
+            let booksSect = new Carousel("url('img/hero-images/Books-Hero.png')", "Discover a variety of books in your favouite genre.");
+            let electronicsSect = new Carousel("url('img/hero-images/Electronics-Hero.png')", "Find the latest and greatest gadgets available in tech.");
     
             const carouselArr = [deliveriesSect, booksSect, electronicsSect];
             let i=0;
