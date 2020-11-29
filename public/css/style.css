@@ -1,3 +1,4 @@
+/* GENERAL */
 *
 {
     margin: 0;
@@ -10,7 +11,7 @@ body
     font-family: 'PT Sans Narrow', sans-serif;
     font-family: 'Nunito', sans-serif;
     display: grid;
-    grid-template-rows: 80px auto 300px;
+    grid-template-rows: 80px auto 350px;
     background-color: var(--light-neutral-color);
 
 }
@@ -26,7 +27,7 @@ body
     --secondary-font: 'Nunito', sans-serif;
 }
 
-h1 
+h2
 {
     font-size: 2.3rem;
     padding-bottom: 15px;
@@ -63,11 +64,7 @@ p, a                                                                            
     bottom: 50px;
     cursor: pointer;
     z-index: 50;
-}
-
-.scrollToTop:hover
-{
-    color: var(--medium-neutral-color);
+    scroll-behavior: smooth;
 }
 
 
@@ -144,7 +141,8 @@ header > div                                                                 /* 
 
 #menuIcon > a > img
 {
-    height: 35px;
+    height: 60px;
+    padding-top: 10px;
 }
 
 #searchbar                                                             /* overall Search bar */
@@ -451,19 +449,34 @@ header > div                                                                 /* 
 #bestsellerCarousel > div > img, #productListCarousel1 > div > img, #productListCarousel2 > div > img, #productListCarousel3 > div > img, #productListCarousel4 > div > img
 {
     align-self: center;
-    width: 100%;
+    width: 200px;
     height: inherit;
     object-fit: contain;
     border: none;
     justify-self: center;
-    padding: 20px 0;
+    padding: 20px;
     cursor: pointer;
+}
+
+.carouselProductGrid > img:nth-child(7), .carouselProductGrid > img:first-child, .carouselProductGrid > img:last-child
+{
+    scroll-snap-align: center;
 }
 
 #bestsellerCarousel, #productListCarousel1, #productListCarousel2, #productListCarousel3, #productListCarousel4
 {
     width: 100%;
     height: 100%;
+}
+.carouselProductGrid::-webkit-scrollbar 
+{
+    display: none;  /* Hide scrollbar in Chrome, Safari and Opera */
+}
+
+.carouselProductGrid 
+{
+    -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
 }
 
 .carouselProductGrid > div
@@ -479,12 +492,13 @@ header > div                                                                 /* 
 
 .carouselProductGrid
 {
-    display: grid;
-    grid-template-columns: repeat(6, 150px);
-    column-gap: 30px;
     height: 300px;
-    margin: 0 25px;
+    width: 100%;n
     justify-content: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
 }
 
 .carouselArrowsGrid
@@ -607,6 +621,12 @@ header > div                                                                 /* 
    grid-template-columns: 1fr 550px 1fr;
 }
 
+.formGrid h1
+{
+    font-size: 2.2rem;
+    padding-bottom: 30px;
+}
+
 .formGrid > div
 {
     grid-column-start: 2;
@@ -673,7 +693,7 @@ header > div                                                                 /* 
     border: 3px solid var(--accent-color);
 }
 
-.formBoxes 
+.formBoxes
 {
     margin-bottom: 30px;
 }
@@ -683,13 +703,7 @@ header > div                                                                 /* 
     margin-bottom: 10px;
 }
 
-.formGrid form > p
-{
-    margin-bottom: 25px;
-    font-size: 0.9rem;
-}
-
-.formGrid > div > form > input[type=submit]
+.formGrid > div > form > input[type=submit], #loginContainer form > a
 {
     background-color: var(--accent-color);
     border: none;
@@ -702,10 +716,679 @@ header > div                                                                 /* 
     text-align: center;
 }
 
-.formGrid > div > form > input[type=submit]:hover
+#loginContainer form > a
+{
+    text-decoration: none;
+}
+
+.formGrid > div > form > input[type=submit]:hover, #loginContainer form > a:hover
 {
     background-color: var(--medium-dark-color);
     cursor: pointer;
+}
+
+#signinContainer img, #customerProfile img
+{
+    height: 150px;
+}
+
+#signinContainer form > p, #loginContainer form > p
+{
+    margin-bottom: 30px;
+}
+
+
+/* DASHBOARD */
+#clerkDashboardContainer, #customerDashboardContainer
+{
+    padding-bottom: 40px;
+    background-color: #fff;
+    width: 100%;
+}
+
+#clerkDashHeader, #customerDashHeader
+{
+    position: relative;
+    height: 350px;
+    background: #ff5000;
+    background: linear-gradient(90deg, rgba(255,80,0,1) 21%, rgba(247,155,52,1) 67%, rgba(255,183,0,1) 100%);
+    color: var(--light-neutral-color);
+}
+
+#customerDashHeader
+{
+    height: 300px;
+}
+
+#clerkDashHeader > div:last-child, #customerDashHeader > div:last-child
+{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    column-gap: 30px;
+}
+
+#clerkDashHeader > div:last-child > div, #customerDashHeader > div:last-child > div
+{
+    margin-top: 30px;
+}
+
+#clerkDashHeader > div:last-child > div > p, #customerDashHeader > div:last-child > div > p       
+{
+    font-size: 1.3rem;
+}
+
+#clerkDashHeader > div > div > img, #customerDashHeader > div > div > img
+{
+    border-radius: 50%;
+    border: solid 2px var(--light-neutral-color);
+    height: 150px;
+    margin-left: 50px;
+}
+
+#clerkHeaderButtons, #customerHeaderButtons
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 350px;
+    margin-top: 30px;
+}
+
+#clerkHeaderButtons > p, #customerHeaderButtons > p
+{
+    font-size: 1.1rem;
+    background-color: var(--medium-dark-color);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    width: 150px;
+}
+
+#clerkHeaderButtons > p:hover, #customerHeaderButtons > p:hover
+{
+    background-color: #2c405f;
+}
+
+.custom-shape-divider-bottom-1605215248 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1605215248 svg 
+{
+    position: relative;
+    display: block;
+    width: calc(120% + 1.3px);
+    height: 84px;
+}
+
+.custom-shape-divider-bottom-1605215248 .shape-fill 
+{
+    fill: #fff;
+}
+
+#clerkDashBody, #clerkDashBody > div
+{
+    background-color: #fff;
+}
+
+#clerkDashBody > div:first-child > div > h2, #customerDashBody > div:first-child > h2, #customerProfile > div:first-child > h2
+{
+    font-size: 3rem;
+    padding-top: 60px;
+    text-align: center;
+}
+
+#customerDashBody > div:first-child > h2
+{
+    padding-bottom: 30px;
+}
+
+#clerkProductCardGrid, #customerProductCardGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.clerkProductCards, .customerProductCards
+{
+    background-color: var(--light-neutral-color);
+    padding: 30px;
+    height: 350px;
+    box-shadow: 1px 1px 20px #b8b8b8;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.clerkProductCards > img, .customerProductCards > img
+{
+    height: 200px;
+    justify-self: center;
+}
+
+.clerkProductCards > p, .customerProductCards > p
+{
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: #ff5000;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.clerkProductCards > p:hover, .customerProductCards > p:hover
+{
+    background-color: var(--accent-color);
+}
+
+ #viewProductsBody, #viewCategoriesBody
+{
+    display: none;
+}
+
+.clerkProductsHeader
+{
+    font-size: 3rem;
+    padding: 60px 0 30px 0;
+    text-align: center;
+}
+
+.returnToSelections
+{
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ff5000;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 120px;
+    cursor: pointer;
+}
+
+.returnToSelections:hover
+{
+    background-color: var(--accent-color);
+}
+
+.addElementContainers
+{
+    padding: 60px 50px 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+}
+
+.addElementContainers > div:first-child > i, .addElementContainers > div > h3
+{
+    display: inline;
+}
+
+.addElementContainers > div:first-child > i
+{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.addElementContainers > div:first-child > i:hover
+{
+    color: #ff5000;
+}
+
+.addElementContainers > div:last-child
+{
+    justify-self: end;
+}
+
+.addElementContainers > div:last-child > h3, .addElementContainers > div:last-child > input
+{
+    display: inline;
+}
+
+.addElementContainers > div:last-child > h3
+{
+    padding-right: 20px;
+}
+
+.addElementContainers > div:last-child > input
+{
+    width: 300px;
+    height: 30px;
+    padding-left: 5px;
+    font: var(--secondary-font);
+    border: solid 2px var(--main-dark-color);
+}
+
+.addElementContainers > div:last-child > i
+{
+    background-color: var(--main-dark-color);
+    color: #fff;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 7px 5px 10px 5px;
+}
+
+.addElementContainers > div:last-child > i:hover
+{
+    background-color: #ff5000;
+}
+
+.addElementContainers > div > h3
+{
+    font-size: 1.7rem;
+}
+
+.clerkProductsGrid, .clerkCategoriesGrid, .customerProductsGrid, .customerCategoriesGrid
+{
+    margin: 0 50px;
+}
+
+.clerkProductsGrid > table, .clerkCategoriesGrid > table, .customerProductsGrid > table, .customerCategoriesGrid > table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customerProductsGrid > div 
+{
+    text-align: right;
+    padding-top: 50px;
+}
+
+.customerProductsGrid > div > h3
+{
+    font-size: 1.5rem;
+}
+
+.customerProductsGrid > div > a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #ff5000;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.customerProductsGrid > div > a:hover
+{
+    background-color: var(--accent-color);
+}
+
+#clerkProfile, #customerProfile
+{
+    display: none;
+}
+
+#customerProfile h3, #clerkProfile h3
+{
+    font-size: 1.5rem;
+    border-left: solid 3px #f79b34;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+#customerProfile img, #clerkProfile img
+{
+    font-size: 1.5rem;
+    border-left: solid 3px #f79b34;
+    padding-left: 10px;
+}
+
+#clerkprofilePicLabel
+{
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+#customerProfile input:not(:last-child), #passwordConfirmationLabel, .passwordErrorMsg, #clerkProfile input:not(:last-child), #clerkProPicFile
+{
+    display: none;
+}
+
+.passwordErrorMsg
+{
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#customerProfile > div > div > h2
+{
+    display: inline;
+}
+
+.profileInfoGrid > p
+{
+    display: inline;
+}
+
+#customerProfile > .formGrid
+{
+    margin-top: 30px;
+}
+
+.profileEditButton
+{
+    color: var(--accent-color);
+    font-style: italic;
+    cursor: pointer;
+}
+
+#clerkProfile img, #customerProfile img
+{
+    height: 135px;
+    margin-top: 5px;
+}
+
+#productTableHeader, #categoryTableHeader
+{
+    background-color: var(--light-neutral-color);
+    color: #000;
+    text-align: center;
+    border: solid #000 1px;
+    margin-right: 0;
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    padding: 100px 0;
+}
+
+th
+{
+    height: 60px;
+}
+
+td
+{
+    font-size: 1.2rem;
+}
+
+td, th 
+{
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#productTableBody
+{
+    font-size: 1.1rem;
+    border: 1px solid #000;
+}
+
+.tableIconsProducts > i, #shoppingCartTable i
+{
+    font-size: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    align-items: center; 
+}
+
+#productTableBody img, #shoppingCartTable img
+{
+    height: 70px;
+    justify-self: center;
+}
+
+.dropdownQuantity
+{
+    font-size: 1.3rem;
+}
+
+.clerkProductsGrid > h3, .clerkCategoriesGrid > h3
+{
+    font-size: 1.4rem;
+}
+
+td > .tableIconsProducts
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+td > .tableIconsCategories
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+td > div > i
+{
+    font-size: 1.7rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.clerkProductsGrid > p, .clerkProductsGrid > div, .clerkCategoriesGrid > p, .clerkCategoriesGrid > div
+{
+    padding-left: 10px;
+    border: 1px solid var(--main-dark-color);
+}
+
+.productTitle
+{
+    width: 20%;
+}
+
+.productImage, .bestsellingProduct, .productPrice, .productQty, .productMin, .productMax, .productCategory, .productSum, .removeItem
+{
+    width: 10%;
+}
+
+.categoryTitle
+{
+    width: 30%;
+}
+
+.categoryDesc
+{
+    width: 50%;
+}
+
+.categoryImage
+{
+    width: 10%;
+}
+
+
+/* CREATE PRODUCT MODAL */
+#clerkProductModal, #clerkCategoryModal
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #d4d4d4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#clerkProductModal form, #clerkCategoryModal form
+{
+    height: 60vh;
+}
+
+.scrollSection
+{
+    overflow: auto;
+}
+
+.productQuantityGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+}
+
+.productBestsellerGrid
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+#productModalCloseButton, #categoryModalCloseButton
+{
+    font-size: 2rem;
+    color: var(--medium-dark-color);
+    text-align: right;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.productModalHeader, .categoryModalHeader
+{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    width: 100%;
+}
+
+.productModalHeader > h1, .categoryModalHeader > h1
+{
+    font-size: 2.2rem;
+    padding-bottom: 30px;
+    text-align: left;
+    color: var(--accent-color);
+}
+
+.formGrid select
+{
+    border-radius: 5px;
+    border: 1.5px solid var(--medium-neutral-color);
+    height: 40px;
+    width: 100%;
+    padding-left: 5px;
+    font: var(--secondary-font);
+}
+
+.formGrid select:focus, .formGrid textarea:focus
+{
+    border-radius: 5px;
+    outline: none;
+    border: 3px solid var(--accent-color);
+}
+
+.formGrid textarea
+{
+    border-radius: 5px;
+    border: 1.5px solid var(--medium-neutral-color);
+    height: 300px;
+    padding: 10px;
+    font-family: var(--secondary-font);
+}
+
+
+/* SHOPPING CART */
+#emptyShoppingCart
+{
+    text-align: center;
+    display: none;
+}
+
+#emptyShoppingCart > div
+{
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    width: 200px;
+}
+
+#emptyShoppingCart > img
+{
+    height: 300px;
+    margin: 30px 0;
+}
+
+#emptyShoppingCart > p
+{
+    font-size: 1.5rem;
+    color: var(--medium-neutral-color);
+    margin-bottom: 50px;
+}
+
+
+/* PRODUCT LISTING */
+#genProductList
+{
+    background-color: #f5f5f5;
+}
+
+#genProductList > div > h1
+{
+    font-size: 3rem;
+    padding: 30px 0 50px 0;
+    text-align: center;
+}
+
+#productListGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 50px;
+    margin: 0 50px 50px 50px
+}
+
+.productListContainers
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 1px 1px 20px #d6d6d6;
+}
+
+.productListContainers > div > h2
+{
+    padding: 10px 0 15px 0;
+    font-size: 1.7rem;
+}
+
+.productListContainers > div > h3
+{
+    padding: 10px 0 15px 0;
+    font-size: 1.3rem;
+}
+
+.productListContainers img
+{
+    height: 200px;
+    justify-self: center;
+    align-self: center
+}
+
+.productListContainers > div > p:last-child
+{
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.productListContainers > div > p:last-child:hover
+{
+    background-color: var(--main-dark-color);
 }
 
 
@@ -718,7 +1401,6 @@ footer
     bottom: 0;
     left: 0;
     z-index: 1;
-    bottom: 0;
 }
 
 footer h1, footer a:link,  footer a:visited, footer h2
@@ -740,12 +1422,6 @@ footer a:hover
 footer li
 {
     list-style: none;
-}
-
-footer > div:last-child > img
-{
-    width: 120px;
-    padding-top: 20px;
 }
 
 footer h2
@@ -773,5 +1449,35 @@ footer h2
 {
     grid-column-start: 2;
     justify-self: center;
-    padding-bottom: 15px;
+    padding: 30px 0 10px 0;
+    width: 230px;
+}
+
+
+/*MEDIA QUERIES (default code is for Extra large devices 1200px and more)*/
+/* Large devices*/
+@media (min-width: 992px) and (max-width: 1199.98px)
+{
+    /* HOME */
+}
+
+
+/* Medium devices*/
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+
+}
+
+
+/* Small devices*/
+@media (min-width: 576px) and (max-width: 767.98px)
+{
+
+}
+
+
+/* Extra small devices */
+@media (max-width: 575.98px)
+{
+
 }

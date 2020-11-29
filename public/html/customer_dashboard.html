@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" id="customerDashHTML">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Shopscape | Customer Dashboard </title>
+        <link rel="shortcut icon" href="../img/favicon3.ico"/>
+        <script src="https://kit.fontawesome.com/383decfa02.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="menuContents">
+                    <div>
+                        <div id="menuHeader">
+                            <i class="fas fa-user-circle"></i>
+                            <a href=""> Hello, Sign in </a>
+                        </div>
+
+                        <div id="menuCloseButton">
+                            <i class="far fa-times-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p> SHOP BY CATEGORY </p>
+                        <div>
+                            <ul>
+                                <li><a href=""> Appliances </a></li>
+                                <li><a href=""> Books </a></li>
+                                <li><a href=""> Electronics </a></li>
+                                <li><a href=""> Furniture </a></li>
+                                <li><a href=""> Luggage </a></li>
+                                <li><a href=""> Makeup </a></li>
+                                <li><a href=""> Skin care </a></li>
+                                <li><a href=""> Toys </a></li>
+                            </ul>
+                        </div>
+
+                        <p> HELP & SETTINGS </p>
+                        <div>
+                            <ul>
+                                <li><a href=""> Your account </a></li>
+                                <li><a href=""> Register </a></li>
+                                <li><a href=""> Log in </a></li>
+                                <li><a href=""> View cart </a></li>
+                                <li><a href=""> Payment </a></li>
+                                <li><a href=""> Help </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id=visibleNavBar>
+                    <div id="menuIcon">
+                        <i class="fas fa-bars"></i>
+                        <a href="../index.html"><img src="../img/shopscapeFullLogo.png" alt="Shopscape logo"></a> 
+                    </div>
+        
+                    <div id="searchbar">
+                        <select name="dropdownSearchItems" id="dropdownSearch">
+                            <option value=""> All </option>
+                            <option value=""> All Departments </option>
+                            <option value=""> Appliances </option>
+                            <option value=""> Books </option>
+                            <option value=""> Electronics </option>
+                            <option value=""> Furniture </option>
+                            <option value=""> Luggage </option>
+                            <option value=""> Makeup </option>
+                            <option value=""> Skin care </option>
+                            <option value=""> Toys </option>
+                        </select>
+                        <input type="text">
+                        <i class="fas fa-search"></i>
+                    </div>
+        
+                    <div id="loginCartArea">
+                        <a href="login.html"> Hello, Sign in </a>
+        
+                        <div>
+                            <a href="customer_dashboard.html">
+                                <p> 0 </p>
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+            <div></div>
+        </header>
+        
+        <main id="customerDashboardContainer">
+            <section id="customerDashHeader">
+                <div class="custom-shape-divider-bottom-1605215248">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div>
+                        <img src="../img/shopscapeDefaultPhoto.png" alt="Clerk's profile photo">
+                    </div>
+                    <div>
+                        <h2> Welcome, <span id="clerkName"> John Smith </span> </h2>
+
+                        <div id="customerHeaderButtons">
+                            <p id="customerProfileButton"> Manage Profile </p>
+                            <p id="customerLogOutButton"> Log out </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="customerDashBody">
+                <div>
+                    <h2> Shopping Cart </h2>
+                </div>
+                <div id="regularCustomerDash" class="customerProductsGrid customerProductsGridContent">
+                    <table id="shoppingCartTable">
+                        <thead id="productTableHeader" class="clerkProductsGrid">
+                            <th class="productImage">Image</th>
+                            <th class="productTitle">Product</th>
+                            <th class="productPrice">Price</th>
+                            <th class="productQty">Quantity</th>
+                            <th class="productSum">Total</th>
+                            <th class="removeItem">Remove item</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../img/electronics/Fitbit.jpg" alt=""></td>
+                                <td>Fitbit smart watch</td>
+                                <td>$<span class="itemCost">887.87</span></td>
+                                <td>
+                                    <select name="dropdownQuantity" class="dropdownQuantity">
+                                        <option value="1"> 1 </option>
+                                        <option value="2"> 2 </option>
+                                        <option value="3"> 3 </option>
+                                        <option value="4"> 4 </option>
+                                        <option value="5"> 5 </option>
+                                    </select>
+                                </td>
+                                <td>$ <span class="itemTotal">887.87</span></td>
+                                <td><i class="fas fa-trash-alt"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="../img/furniture/Sofa bed.jpg" alt=""></td>
+                                <td>JJ's teal sofa bed</td>    
+                                <td>$<span class="itemCost">1200</span></td>
+                                <td>
+                                    <select name="dropdownQuantity" class="dropdownQuantity">
+                                        <option value="1"> 1 </option>
+                                        <option value="2"> 2 </option>
+                                        <option value="3"> 3 </option>
+                                        <option value="4"> 4 </option>
+                                        <option value="5"> 5 </option>
+                                    </select>
+                                </td>
+                                <td>$<span class="itemTotal">1200</span></td>
+                                <td><i class="fas fa-trash-alt"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="../img/electronics/Polaroid camera.jpg" alt=""></td>
+                                <td>Polaroid camera</td>    
+                                <td>$<span class="itemCost">426.66</span></td>
+                                <td>
+                                    <select name="dropdownQuantity" class="dropdownQuantity">
+                                        <option value="1"> 1 </option>
+                                        <option value="2"> 2 </option>
+                                        <option value="3"> 3 </option>
+                                        <option value="4"> 4 </option>
+                                        <option value="5"> 5 </option>
+                                    </select>
+                                </td>
+                                <td>$<span class="itemTotal">426.66</span></td>
+                                <td><i class="fas fa-trash-alt"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <h3> Subtotal: $<span id="cartSubtotal">2,514.53</span> </h3>
+                        <a href="payment.html"> CHECKOUT </a>
+                    </div>
+                </div>
+                <div id="emptyShoppingCart">
+                    <div></div>
+                    <img src="../img/emptyCart.svg" alt="Image of a man about to shop with an empty cart">
+                    <p>Oh no! Your cart is empty at the moment.</p>
+                </div>
+            </section>
+
+            <section id="customerProfile">
+                <p id="returnToCartButton" class="returnToSelections">RETURN</p>
+
+                <div class="formGrid">
+                    <div>
+                        <form action="">
+                            <h2>Customer Profile</h2>
+                            <div class="profileInfoGrid">
+                                <label for="userFirstName"> First name </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>John</h3>
+                            <input class="formBoxes" type="text">
+                            
+                            <div class="profileInfoGrid">
+                                <label for="userLastName"> Last name </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>Smith</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label for="userEmail"> Email address </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>jsmith@hotmail.com</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label for="userAddress"> Mailing address </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>#29 Folsom St</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label for="userCityTown"> City/Town </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>New York City</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label for="userState"> State </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>New York</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label for="userCountry"> Country </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>United States</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label id="clerkprofilePicLabel" for="userProfilePic"> Profile Photo </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <div class="formControl formBoxes">
+                                <img src="../img/shopscapeDefaultPhoto.png" alt="Clerk's profile photo">
+                                <div class="photoContianer"></div>
+                                <input type="file" id="clerkProPicFile" name="file">
+                            </div>
+
+                            <div class="profileInfoGrid">
+                                <label for="userPassword"> Password </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>**********</h3>
+                            <input class="formBoxes"type="text">
+
+                            <label id="passwordConfirmationLabel" for="userPassword"> Confirm password </label>
+                            <input class="formBoxes"type="text">
+
+                            <input type="submit" value="SAVE">
+                        </form>
+
+                        <div>
+                            <p class="passwordErrorMsg"> Oops! Your passwords do not match. Please try again. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="scrollToTop">
+                    <i class="fas fa-arrow-alt-circle-up"></i>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div id="footerGridTop">
+                <div>
+                    <h2> User Portal </h2>
+                    <ul>
+                        <li><a href=""> Register </a></li>
+                        <li><a href=""> Sign in</a></li>
+                        <li><a href=""> Update profile </a></li>
+                        <li><a href=""> View cart </a></li>
+                        <li><a href=""> Payment </a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2> Products </h2>
+                    <ul>
+                        <li><a href=""> Bestsellers </a></li>
+                        <li><a href=""> Appliances </a></li>
+                        <li><a href=""> Books </a></li>
+                        <li><a href=""> Electronics </a></li>
+                        <li><a href=""> Furniture </a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2> Connect </h2>
+                    <ul>
+                        <li><a href=""> About us </a></li>
+                        <li><a href=""> Contact us </a></li>
+                        <li><a href=""> Supply to us </a></li>
+                        <li><a href=""> Vacancies </a></li>
+                        <li><a href=""> Help </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footerGridBottom">
+                <img src="../img/shopscapeFullLogo.png" alt="Amazon logo">
+            </div>
+        </footer>
+
+        <script src="../js/app.js"></script>
+    </body>
+</html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="homePageHTML">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Amazon | Home </title>
-    <link rel="shortcut icon" href="public/img/favicon.ico"/>
+    <title> Shopscape | Home </title>
+    <link rel="shortcut icon" href="img/favicon3.ico"/>
     <script src="https://kit.fontawesome.com/383decfa02.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -16,7 +16,7 @@
                 <div>
                     <div id="menuHeader">
                         <i class="fas fa-user-circle"></i>
-                        <a href="public/html/login.html"> Hello, Sign in </a>
+                        <a href="html/login.html"> Hello, Sign in </a>
                     </div>
 
                     <div id="menuCloseButton">
@@ -56,7 +56,7 @@
             <div id=visibleNavBar>
                 <div id="menuIcon">
                     <i class="fas fa-bars"></i>
-                    <a href="index.html"><img src="public/img/amazonFullLogo.png" alt="Amazon logo"></a> 
+                    <a href="index.html"><img src="img/shopscapeFullLogo.png" alt="Amazon logo"></a> 
                 </div>
     
                 <div id="searchbar">
@@ -77,10 +77,10 @@
                 </div>
     
                 <div id="loginCartArea">
-                    <a href="public/html/login.html"> Hello, Sign in </a>
+                    <a href="html/login.html"> Hello, Sign in </a>
     
                     <div>
-                        <a href="public/html/cart.html">
+                        <a href="html/customer_dashboard.html">
                             <p> 0 </p>
                             <i class="fas fa-shopping-cart"></i>
                         </a>
@@ -112,22 +112,22 @@
                     <h3> Shop by category </h3>
                     <div id="categoryProductCard">
                         <div class="miniCategoryCard">
-                            <img src="public/img/appliances/Cereal dispenser.jpg" alt="">
+                            <img src="img/appliances/Cereal dispenser.jpg" alt="">
                             <p> Appliances </p>
                         </div>
 
                         <div class="miniCategoryCard">
-                            <img src="public/img/electronics/Fitbit.jpg" alt="">
+                            <img src="img/electronics/Fitbit.jpg" alt="">
                             <p> Electronics </p>
                         </div>
 
                         <div class="miniCategoryCard">
-                            <img src="public/img/books/The Alchemist.jpg" alt="">
+                            <img src="img/books/The Alchemist.jpg" alt="">
                             <p> Books </p>
                         </div>
 
                         <div class="miniCategoryCard">
-                            <img src="public/img/furniture/Sofa bed.jpg" alt="">
+                            <img src="img/furniture/Sofa bed.jpg" alt="">
                             <p> Furniture </p>
                         </div>
                     </div>
@@ -136,19 +136,19 @@
 
                 <div class="productCards">
                     <h3> Luggage </h3>
-                    <img src="public/img/luggage/Luggage set.jpg" alt="">
+                    <img src="img/luggage/Luggage set.jpg" alt="">
                     <a href=""> See more</a>
                 </div>
 
                 <div class="productCards">
                     <h3> Makeup </h3>
-                    <img src="public/img/makeup/Fenty gloss set.jpg" alt="">
+                    <img src="img/makeup/Fenty gloss set.jpg" alt="">
                     <a href=""> See more</a>
                 </div>
 
                 <div class="productCards">
                     <h3> Skin care </h3>
-                    <img src="public/img/skincare/Under Eye Patch.jpg" alt="">
+                    <img src="img/skincare/Under Eye Patch.jpg" alt="">
                     <a href=""> See more</a>
                 </div>
             </div>
@@ -156,20 +156,23 @@
             <div id="bestsellerCarouselContainer">
                 <h2> Best Sellers </h2>
                 <i class="fas fa-check-circle"></i>
-                <a href=""> See more </a>
+                <a href="html/gen_product_list.html"> See more </a>
                 
                 <div id=bestsellerCarousel>
-                    <div class="carouselProductGrid">
-                        <img src="public/img/appliances/Cereal dispenser.jpg" alt="">
-                        <img src="public/img/electronics/Fitbit.jpg" alt="">
-                        <img src="public/img/books/Mexican Gothic.jpg" alt="">
-                        <img src="public/img/electronics/Polaroid camera.jpg" alt="">
-                        <img src="public/img/furniture/sidetable.jpg" alt="">
-                        <img src="public/img/appliances/Vacuum sealer.jpg" alt="">
+                    <div id="bestsellerGrid" class="carouselProductGrid">
+                        <img src="img/appliances/Cereal dispenser.jpg" alt="">
+                        <img src="img/electronics/Fitbit.jpg" alt="">
+                        <img src="img/books/Mexican Gothic.jpg" alt="">
+                        <img src="img/electronics/Polaroid camera.jpg" alt="">
+                        <img src="img/furniture/sidetable.jpg" alt="">
+                        <img src="img/appliances/Vacuum sealer.jpg" alt="">
+                        <img src="img/appliances/Coffee maker.jpg" alt="">
+                        <img src="img/furniture/Sofa bed.jpg" alt="">
+                        <img src="img/books/Narnia box set.jpg" alt="">
                     </div> 
                     <div class="carouselArrowsGrid">
-                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
-                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                        <div id="bestsellerLeftButn" class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div id="bestsellerRightButn" class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
                     </div>
                 </div>
             </div>
@@ -179,17 +182,17 @@
                 <a href=""> See more </a>
                 
                 <div id=productListCarousel1>
-                    <div class="carouselProductGrid">
-                        <img src="public/img/appliances/Air fryer.jpg" alt="">
-                        <img src="public/img/appliances/Coffee maker.jpg" alt="">
-                        <img src="public/img/appliances/S'mores maker.jpg" alt="">
-                        <img src="public/img/appliances/Cereal dispenser.jpg" alt="">
-                        <img src="public/img/appliances/Glass kettle.jpg" alt="">
-                        <img src="public/img/appliances/Vacuum sealer.jpg" alt="">
+                    <div id="productGrid1" class="carouselProductGrid">
+                        <img src="img/appliances/Air fryer.jpg" alt="">
+                        <img src="img/appliances/Coffee maker.jpg" alt="">
+                        <img src="img/appliances/S'mores maker.jpg" alt="">
+                        <img src="img/appliances/Cereal dispenser.jpg" alt="">
+                        <img src="img/appliances/Glass kettle.jpg" alt="">
+                        <img src="img/appliances/Vacuum sealer.jpg" alt="">
                     </div> 
                     <div class="carouselArrowsGrid">
-                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
-                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                        <div id="product1LeftButn" class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div id="product1RightButn" class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
                     </div>
                 </div>
             </div>
@@ -199,17 +202,17 @@
                 <a href=""> See more </a>
     
                 <div id=productListCarousel2>
-                    <div class="carouselProductGrid">
-                        <img src="public/img/books/Harry Potter box set.jpg" alt="">
-                        <img src="public/img/books/Hobbit LOTR box set.jpg" alt="">
-                        <img src="public/img/books/Narnia box set.jpg" alt="">
-                        <img src="public/img/books/The Alchemist.jpg" alt="">
-                        <img src="public/img/books/Mexican Gothic.jpg" alt="">
-                        <img src="public/img/books/One By One.jpg" alt="">
+                    <div id="productGrid2" class="carouselProductGrid">
+                        <img src="img/books/Harry Potter box set.jpg" alt="">
+                        <img src="img/books/Hobbit LOTR box set.jpg" alt="">
+                        <img src="img/books/Narnia box set.jpg" alt="">
+                        <img src="img/books/The Alchemist.jpg" alt="">
+                        <img src="img/books/Mexican Gothic.jpg" alt="">
+                        <img src="img/books/One By One.jpg" alt="">
                     </div>
                     <div class="carouselArrowsGrid">
-                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
-                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                        <div id="product2LeftButn" class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div id="product2RightButn" class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
                     </div>
                 </div>
             </div>
@@ -219,17 +222,17 @@
                 <a href=""> See more </a>
     
                 <div id=productListCarousel3>
-                    <div class="carouselProductGrid">
-                        <img src="public/img/electronics/Headphones.jpg" alt="">
-                        <img src="public/img/electronics/Speaker.jpg" alt="">
-                        <img src="public/img/electronics/Polaroid camera.jpg" alt="">
-                        <img src="public/img/electronics/Tablet.jpg" alt="">
-                        <img src="public/img/electronics/Microphone.jpg" alt="">
-                        <img src="public/img/electronics/Fitbit.jpg" alt="">
+                    <div id="productGrid3" class="carouselProductGrid">
+                        <img src="img/electronics/Headphones.jpg" alt="">
+                        <img src="img/electronics/Speaker.jpg" alt="">
+                        <img src="img/electronics/Polaroid camera.jpg" alt="">
+                        <img src="img/electronics/Tablet.jpg" alt="">
+                        <img src="img/electronics/Microphone.jpg" alt="">
+                        <img src="img/electronics/Fitbit.jpg" alt="">
                     </div>
                     <div class="carouselArrowsGrid">
-                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
-                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                        <div id="product3LeftButn" class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div id="product3RightButn" class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
                     </div>
                 </div>
             </div>
@@ -239,24 +242,25 @@
                 <a href=""> See more </a>
     
                 <div id=productListCarousel4>
-                    <div class="carouselProductGrid">
-                        <img src="public/img/furniture/sidetable.jpg" alt="">
-                        <img src="public/img/furniture/Bookshelf crisscross.jpg" alt="">
-                        <img src="public/img/furniture/Bed.jpg" alt="">
-                        <img src="public/img/furniture/Coffee table.jpg" alt="">
-                        <img src="public/img/furniture/Loveseat.jpg" alt="">
-                        <img src="public/img/furniture/Sofa bed.jpg" alt="">
+                    <div id="productGrid4" class="carouselProductGrid">
+                        <img src="img/furniture/sidetable.jpg" alt="">
+                        <img src="img/furniture/Bookshelf crisscross.jpg" alt="">
+                        <img src="img/furniture/Bed.jpg" alt="">
+                        <img src="img/furniture/Coffee table.jpg" alt="">
+                        <img src="img/furniture/Loveseat.jpg" alt="">
+                        <img src="img/furniture/Sofa bed.jpg" alt="">
                     </div>
                     <div class="carouselArrowsGrid">
-                        <div class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
-                        <div class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
+                        <div id="product4LeftButn" class="leftArrowScroll"> <i class="fas fa-caret-square-left"></i> </div>
+                        <div id="product4RightButn" class="rightArrowScroll"> <i class="fas fa-caret-square-right"></i> </div> 
                     </div>
                 </div>
             </div>
-            
-            <div class="scrollToTop">
-                <i class="fas fa-arrow-alt-circle-up"></i>
-            </div>
+            <section>
+                <div class="scrollToTop">
+                    <i class="fas fa-arrow-alt-circle-up"></i>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -296,10 +300,10 @@
             </div>
         </div>
         <div id="footerGridBottom">
-            <img src="public/img/amazonFullLogo.png" alt="Amazon logo">
+            <img src="img/shopscapeFullLogo.png" alt="Amazon logo">
         </div>
     </footer>
 
-    <script src="public/js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

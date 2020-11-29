@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Amazon | Register </title>
-        <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <title> Shopscape | Register </title>
+        <link rel="shortcut icon" href="../img/favicon3.ico"/>
         <script src="https://kit.fontawesome.com/383decfa02.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
@@ -56,7 +56,7 @@
                 <div id=visibleNavBar>
                     <div id="menuIcon">
                         <i class="fas fa-bars"></i>
-                        <a href="../../index.html"><img src="../img/amazonFullLogo.png" alt="Amazon logo"></a> 
+                        <a href="../index.html"><img src="../img/shopscapeFullLogo.png" alt="Amazon logo"></a> 
                     </div>
         
                     <div id="searchbar">
@@ -80,7 +80,7 @@
                         <a href="../html/login.html"> Hello, Sign in </a>
         
                         <div>
-                            <a href="../html/cart.html">
+                            <a href="../html/customer_dashboard.html">
                                 <p> 0 </p>
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
@@ -108,11 +108,31 @@
                                 <label for=""> Email </label>
                                 <input class="formBoxes" type="text">
 
+                                <label for="userAddress"> Mailing address (*street number and name only) </label>
+                                <input class="formBoxes"type="text">
+    
+                                
+                                <label for="userCityTown"> City/Town </label>
+                                <input class="formBoxes"type="text">
+    
+                            
+                                <label for="userState"> State </label>
+                                <input class="formBoxes"type="text">
+    
+                                <label for="userCountry"> Country </label>
+                                <input class="formBoxes"type="text">
+
+                                <label for="userProfilePic"> Profile Photo </label>
+                                <div class="formControl formBoxes">
+                                    <div class="photoContianer"></div>
+                                    <input type="file" name="file">
+                                </div>
+
                                 <label for=""> Password </label>
                                 <input class="passwordBoxes" type="text">
                                 <p> *Please enter a password that contains letters and at least one number and symbol. </p>
 
-                                <label for=""> Password again </label>
+                                <label for=""> Confirm password </label>
                                 <input class="formBoxes" type="text">
 
                                 <input type="submit" value="REGISTER">
@@ -120,6 +140,11 @@
                         </div>
                     </div>
                 </section>    
+                <section>
+                    <div class="scrollToTop">
+                        <i class="fas fa-arrow-alt-circle-up"></i>
+                    </div>
+                </section>
             </div>        
         </main>
 
@@ -159,7 +184,7 @@
                 </div>
             </div>
             <div id="footerGridBottom">
-                <img src="../img/amazonFullLogo.png" alt="Amazon logo">
+                <img src="../img/shopscapeFullLogo.png" alt="Amazon logo">
             </div>
         </footer>
 

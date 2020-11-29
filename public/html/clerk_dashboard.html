@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="clerkDashHTML">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Amazon | Clerk Dashboard </title>
-        <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <title> Shopscape | Clerk Dashboard </title>
+        <link rel="shortcut icon" href="../img/favicon3.ico"/>
         <script src="https://kit.fontawesome.com/383decfa02.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
@@ -56,11 +56,11 @@
                 <div id=visibleNavBar>
                     <div id="menuIcon">
                         <i class="fas fa-bars"></i>
-                        <a href="../../index.html"><img src="../img/amazonFullLogo.png" alt="Amazon logo"></a> 
+                        <a href="../index.html"><img src="../img/shopscapeFullLogo.png" alt="Shopscape logo"></a> 
                     </div>
         
                     <div id="searchbar">
-                        <select name="dropdownSerachItems" id="dropdownSearch">
+                        <select name="dropdownSearchItems" id="dropdownSearch">
                             <option value=""> All </option>
                             <option value=""> All Departments </option>
                             <option value=""> Appliances </option>
@@ -77,10 +77,10 @@
                     </div>
         
                     <div id="loginCartArea">
-                        <a href="public/html/login.html"> Hello, Sign in </a>
+                        <a href="login.html"> Hello, Sign in </a>
         
                         <div>
-                            <a href="public/html/cart.html">
+                            <a href="#">
                                 <p> 0 </p>
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
@@ -91,12 +91,355 @@
             <div></div>
         </header>
         
-        <main class="clerkDashboardContainer">
+        <main id="clerkDashboardContainer">
+            <section id="clerkDashHeader">
+                <div class="custom-shape-divider-bottom-1605215248">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div>
+                        <img src="../img/shopscapeDefaultPhoto.png" alt="Clerk's profile photo">
+                    </div>
+                    <div>
+                        <h2> Welcome, <span id="clerkName"> Shireen Pierre </span> </h2>
+                        <p> Clerk Identification Number: <span id="clerkIDNum"> 12345 </span> </p>
+                     <!--<p> Monthly Product Input: <span id="clerkInputRate"> 12 </span></p>-->
+
+                        <div id="clerkHeaderButtons">
+                            <p id="clerkProfileButton"> Manage Profile </p>
+                            <p> Log out </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="clerkDashBody">
+                <div>
+                    <div id="clerkCallToAction">
+                        <h2> Let's get started! </h2>
+                        <div id="clerkProductCardGrid">
+                            <div class="clerkProductCards">
+                                <img src="../img/viewProductPic.svg" alt="View product image">
+                                <p id="viewProductsButton"> View products </p>
+                            </div>
+                            <div class="clerkProductCards">
+                                <img src="../img/addCategoryPic.svg" alt="Add category image">
+                                <p id="viewCategoriesButton"> View categories </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="viewProductsBody">
+                    <section>
+                        <div>
+                            <h1 class="clerkProductsHeader">View Products</h1>
+                            <p class="returnToSelections"> RETURN </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <div id="addProductModalToggle" class="addElementContainers">
+                                <div>
+                                    <i id="addProductButton" class="fas fa-plus-circle"></i>
+                                    <h3>Add a product</h3>
+                                </div>
+
+                                <div>
+                                    <h3>Search for a category</h3>
+                                    <input type="text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="clerkProductsGrid clerkProductsGridContent">
+                                    <table>
+                                        <thead id="productTableHeader" class="clerkProductsGrid">
+                                            <th class="productTitle">Product Title</th>
+                                            <th class="productImage">Image</th>
+                                            <th class="productCategory">Category</th>
+                                            <th class="bestsellingProduct">Bestseller</th>
+                                            <th class="productPrice">Price</th>
+                                            <th class="productQty">Quantity</th>
+                                            <th class="productMin">Min</th>
+                                            <th class="productMax">Max</th>
+                                            <th>View/Edit/Delete</th>
+                                        </thead>
+                                        <tbody id="productTableBody">
+                                            <tr>
+                                                <td>Fitbit smart watch</td>
+                                                <td><img src="../img/electronics/Fitbit.jpg" alt=""></td>
+                                                <td>Electronics</td>
+                                                <td>No</td>
+                                                <td>$2,000</td>
+                                                <td>7,000</td>
+                                                <td>300</td>
+                                                <td>10,000</td>
+                                                <td>
+                                                    <div class="tableIconsProducts">
+                                                        <i class="fas fa-binoculars"></i>
+                                                        <i class="fas fa-edit"></i>
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>JJ's teal sofa bed</td>
+                                                <td><img src="../img/furniture/Sofa bed.jpg" alt=""></td>
+                                                <td>Furniture</td>
+                                                <td>Yes</td>
+                                                <td>$9000</td>
+                                                <td>400</td>
+                                                <td>200</td>
+                                                <td>9,000</td>
+                                                <td>
+                                                    <div class="tableIconsProducts">
+                                                        <i class="fas fa-binoculars"></i>
+                                                        <i class="fas fa-edit"></i>
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="clerkProductModal" class="formGrid">
+                            <div class="scrollSection">
+                                <div class="productModalHeader">
+                                    <h1>Create Product</h1>
+                                    <i id="productModalCloseButton" class="fas fa-window-close"></i>
+                                </div>
+
+                                <form action="">
+                                    <label for="productTitle"> Product Title: </label>
+                                    <input class="formBoxes" type="text">
+                                    
+                                    <label for="categoryTitle"> Category: </label>
+                                    <select name="dropdownCategories" id="dropdownCategories" class="formBoxes">
+                                        <option value=""> None </option>
+                                        <option value=""> Appliances </option>
+                                        <option value=""> Books </option>
+                                        <option value=""> Electronics </option>
+                                        <option value=""> Furniture </option>
+                                        <option value=""> Luggage </option>
+                                        <option value=""> Makeup </option>
+                                        <option value=""> Skin care </option>
+                                        <option value=""> Toys </option>
+                                    </select>
+
+                                    <label for="productDescription"> Description: </label>
+                                    <textarea class="formBoxes" type="text"></textarea>
+
+                                    <label for="price"> Price: </label>
+                                    <input class="formBoxes" type="text">
+
+                                    <div class="productQuantityGrid">
+                                        <div>
+                                            <label for="stockQuantity"> Quantity: </label>
+                                            <input class="formBoxes" type="text">
+                                        </div>
+
+                                        <div>
+                                            <label for="stockMinimum">  Min: </label>
+                                            <input class="formBoxes" type="text">
+                                        </div>
+
+                                        <div>
+                                            <label for="stockMaximum"> Max: </label>
+                                            <input class="formBoxes" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="productBestsellerGrid formBoxes">
+                                        <label for="bestsellerStatus"> Bestseller Status: </label>
+                                        <div>
+                                            <label for="yesBestseller">Yes</label>
+                                            <input type="radio" id="yesBestseller" name="bestsellerStatus" value="yes">
+                                        </div>
+
+                                        <div>
+                                            <label for="noBestseller">No</label>
+                                            <input type="radio" id="noBestseller" name="bestsellerStatus" value="no">
+                                        </div>
+                                    </div>
+
+                                    <label for="productImage"> Upload image: </label>
+                                    <div class="formControl formBoxes">
+                                        <div class="photoContianer"></div>
+                                        <input type="file" id="file" name="file">
+                                    </div>
+        
+                                    <input type="submit" value="CREATE">
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="viewCategoriesBody">
+                    <section>
+                        <div>
+                            <h1 class="clerkProductsHeader">View Categories</h1>
+                            <p class="returnToSelections"> RETURN </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <div id="addCategoryModalToggle" class="addElementContainers">
+                                <div>
+                                    <i id="addCategoryButton" class="fas fa-plus-circle"></i>
+                                    <h3>Add a category</h3>
+                                </div>
+
+                                <div>
+                                    <h3>Search for a category</h3>
+                                    <input type="text">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                               <div class="clerkCategoriesGrid clerkProductsGridContent">
+                                    <table>
+                                        <thead id="categoryTableHeader" class="clerkProductsGrid">
+                                            <th class="categoryTitle">Category Title</th>
+                                            <th class="categoryDesc">Description</th>
+                                            <th class="categoryImage">Image</th>
+                                            <th>Edit/Delete</th>
+                                        </thead>
+                                        <tbody id="productTableBody">
+                                            <tr>
+                                                <td>Electronics</td>
+                                                <td> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut fuga optio ex aspernatur consequuntur repudiandae vero consequatur enim, neque dolores ipsa iure ipsum nihil quas impedit perspiciatis similique temporibus laudantium! </td>
+                                                <td><img src="../img/electronics/Fitbit.jpg" alt=""></td>
+                                                <td>
+                                                    <div class="tableIconsCategories">
+                                                        <i class="fas fa-edit"></i>
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Furniture</td>
+                                                <td> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut fuga optio ex aspernatur consequuntur repudiandae vero consequatur enim, neque dolores ipsa iure ipsum nihil quas impedit perspiciatis similique temporibus laudantium! </td>
+                                                <td><img src="../img/furniture/Sofa bed.jpg" alt=""></td>
+                                                <td>
+                                                    <div class="tableIconsCategories">
+                                                        <i class="fas fa-edit"></i>
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="clerkCategoryModal" class="formGrid">
+                            <div class="scrollSection">
+                                <div class="categoryModalHeader">
+                                    <h1>Create Category</h1>
+                                    <i id="categoryModalCloseButton" class="fas fa-window-close"></i>
+                                </div>
+
+                                <form action="">
+                                    <label for="productTitle"> Category Title: </label>
+                                    <input class="formBoxes" type="text">
+
+                                    <label for="productDescription"> Description: </label>
+                                    <textarea class="formBoxes" type="text"></textarea>
+
+                                    <label for="productImage"> Upload image: </label>
+                                    <div class="formControl formBoxes">
+                                        <div class="photoContianer"></div>
+                                        <input type="file" id="file" name="file">
+                                    </div>
+        
+                                    <input type="submit" value="CREATE">
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section id="clerkProfile">
+                <p id="returnToCartButton" class="returnToSelections">RETURN</p>
+                <div class="formGrid">
+                    <div>
+                        <h2>Clerk Profile</h2>
+                
+                        <form action="">
+                            <div class="profileInfoGrid">
+                                <label for="userFirstName"> First name </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>Shireen</h3>
+                            <input class="formBoxes" type="text">
+                            
+                            <div class="profileInfoGrid">
+                                <label for="userLastName"> Last name </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>Pierre</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label for="userEmail"> Email address </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>shireen_pierre@hotmail.com</h3>
+                            <input class="formBoxes"type="text">
+
+                            <div class="profileInfoGrid">
+                                <label for="userPassword"> Password </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <h3>**********</h3>
+                            <input class="formBoxes"type="text">
+
+                            <label id="passwordConfirmationLabel" for="userPassword"> Confirm password </label>
+                            <input id="lastInputBox" class="formBoxes" type="text">
+                            <p id="clerkProfilePasswordError" class="passwordErrorMsg">*Sorry, your passwords do not match. Please try again.</p>
+
+                            <div class="profileInfoGrid">
+                                <label id="clerkprofilePicLabel" for="userProfilePic"> Profile Photo </label>
+                                <p class="profileEditButton">edit</p>
+                            </div>
+                            <div class="formControl formBoxes">
+                                <img src="../img/shopscapeDefaultPhoto.png" alt="Clerk's profile photo">
+                                <div class="photoContianer"></div>
+                                <input type="file" id="clerkProPicFile" name="file">
+                            </div>
+
+                            <input type="submit" value="SAVE">
+                        </form>
+
+                        <div>
+                            <p class="passwordErrorMsg"> Oops! Your passwords do not match. Please try again. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section>
-                <img src="" alt="">
-                <h2></h2>
-                <p> Clerk ID: </p>
-                <p> 12345 </p>
+                <div class="scrollToTop">
+                    <i class="fas fa-arrow-alt-circle-up"></i>
+                </div>
             </section>
         </main>
 
@@ -136,7 +479,7 @@
                 </div>
             </div>
             <div id="footerGridBottom">
-                <img src="../img/amazonFullLogo.png" alt="Amazon logo">
+                <img src="../img/shopscapeFullLogo.png" alt="Amazon logo">
             </div>
         </footer>
 

@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Amazon | Your Cart </title>
-        <link rel="shortcut icon" href="public/img/favicon.ico"/>
+        <title> Shopscape | Product Listing </title>
+        <link rel="shortcut icon" href="../img/favicon3.ico"/>
         <script src="https://kit.fontawesome.com/383decfa02.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
         <header>
@@ -56,7 +56,7 @@
                 <div id=visibleNavBar>
                     <div id="menuIcon">
                         <i class="fas fa-bars"></i>
-                        <a href="../../index.html"><img src="../img/amazonFullLogo.png" alt="Amazon logo"></a> 
+                        <a href="../index.html"><img src="../img/shopscapeFullLogo.png" alt="Shopscape logo"></a> 
                     </div>
         
                     <div id="searchbar">
@@ -77,10 +77,10 @@
                     </div>
         
                     <div id="loginCartArea">
-                        <a href="public/html/login.html"> Hello, Sign in </a>
+                        <a href="../html/login.html"> Hello, Sign in </a>
         
                         <div>
-                            <a href="public/html/cart.html">
+                            <a href="customer_dashboard.html">
                                 <p> 0 </p>
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
@@ -91,7 +91,73 @@
             <div></div>
         </header>
         
-        <main class="cartContainer"></main>
+        <main id="genProductList" class="productDetailsContainer">
+            <div>
+                <h1> Bestsellers </h1>
+
+                <div id="productListGrid">
+                    <div class="productListContainers">
+                        <img src="../img/electronics/Fitbit.jpg" alt="">
+                        <div>
+                            <h2>Fitbit Smart Watch</h2>
+                            <p>Use amazon Alexa built in to get quick news and information, check the weather, set timers and alarms, control your smart home devices and more all through the sound of your voice.</p>
+                            <h3>Price: $<span>887.87</span></h3>
+                            <p>ADD TO CART</p>
+                        </div>
+                    </div>
+
+                    <div class="productListContainers">
+                        <img src="../img/furniture/Sofa bed.jpg" alt="">
+                        <div>
+                            <h2>JJ's teal sofa bed</h2>
+                            <p>From Chair to Chaise and Lounge; there 4 different and comfortable positions to choose from. Converting is a breeze; additional legs are hidden inside.</p>
+                            <h3>Price: $<span>1200</span></h3>
+                            <p>ADD TO CART</p>
+                        </div>
+                    </div>
+
+                    <div class="productListContainers">
+                        <img src="../img/books/Narnia box set.jpg" alt="">
+                        <div>
+                            <h2>Narnia box set</h2>
+                            <p>Journeys into magical realms, battles between good and evil, talking creatures, and more await readers of all ages in The Chronicles of Narnia. This box set includes all seven titles.</p>
+                            <h3>Price: $<span>419.71</span></h3>
+                            <p>ADD TO CART</p>
+                        </div>
+                    </div>
+
+                    <div class="productListContainers">
+                        <img src="../img/books/Mexican Gothic.jpg" alt="">
+                        <div>
+                            <h2>Mexican Gothic</h2>
+                            <p>The acclaimed author of Gods of Jade and Shadow returns with a mesmerising feminist re-imagining of Gothic fantasy, in which a young socialite discovers the haunting secrets of a beautiful old mansion in 1950s Mexico.</p>
+                            <h3>Price: $<span>89.41</span></h3>
+                            <p>ADD TO CART</p>
+                        </div>
+                    </div>
+
+                    <div class="productListContainers">
+                        <img src="../img/electronics/Polaroid camera.jpg" alt="">
+                        <div>
+                            <h2>Polaroid camera</h2>
+                            <p>New selfie mirror; Auto power off time: 5 minutes; Constant firing flash (automatic light adjustment); Recycle time: 0.2 sec to 6 sec (when using new batteries), Effective flash range 0.6 meter to 2.7 meters.</p>
+                            <h3>Price: $<span>426.66</span></h3>
+                            <p>ADD TO CART</p>
+                        </div>
+                    </div>
+
+                    <div class="productListContainers">
+                        <img src="../img/appliances/Cereal dispenser.jpg" alt="">
+                        <div>
+                            <h2>Penen Cereal Dispenser</h2>
+                            <p>Holds up to 17.5 ounces per plastic cereal container. Dispense standard size portions easily; 1 ounce per twist. Preserves freshness for up to 45 days to minimize waste.</p>
+                            <h3>Price: $<span>233.94</span></h3>
+                            <p>ADD TO CART</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
         <footer>
             <div id="footerGridTop">
@@ -129,7 +195,7 @@
                 </div>
             </div>
             <div id="footerGridBottom">
-                <img src="public/img/amazonFullLogo.png" alt="Amazon logo">
+                <img src="../img/shopscapeFullLogo.png" alt="Amazon logo">
             </div>
         </footer>
 
